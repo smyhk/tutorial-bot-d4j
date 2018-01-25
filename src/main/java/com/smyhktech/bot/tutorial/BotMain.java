@@ -6,6 +6,8 @@
 package com.smyhktech.bot.tutorial;
 
 import com.smyhktech.bot.tutorial.commands.HelpCommand;
+import com.smyhktech.bot.tutorial.config.Config;
+import com.smyhktech.bot.tutorial.config.File;
 import com.smyhktech.bot.tutorial.objects.Bot;
 import com.smyhktech.bot.tutorial.objects.Command;
 import java.util.List;
@@ -19,12 +21,15 @@ import sx.blah.discord.handle.obj.IUser;
  */
 public class BotMain {
     
+    private static Config token;
     public static Bot bot;
     
     public static void main(String[] args) {
         
+        token = new Config(new File("Token"));
+        
         // this token will be regenerated and acquired via environment variables
-        bot = new Bot("NDA1NDMyNDYwOTY5NjM5OTM2.DUrLRg.wR7TWPxkU6hbkx01CIvB-Ebdu9E");
+        bot = new Bot(token.getObject("token", "[PUT TOKEN HERE]"));
         
         bot.addCommand(new HelpCommand());
         bot.addCommand(new Command() {
