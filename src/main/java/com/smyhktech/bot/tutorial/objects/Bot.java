@@ -8,6 +8,7 @@ package com.smyhktech.bot.tutorial.objects;
 import java.util.List;
 import sx.blah.discord.api.ClientBuilder;
 import sx.blah.discord.api.IDiscordClient;
+import sx.blah.discord.handle.obj.IGuild;
 import sx.blah.discord.util.DiscordException;
 
 /**
@@ -35,6 +36,14 @@ public class Bot {
     
     public List<Command> getCommands() {
         return commands.getCommands();
+    }
+    
+    public void logout() {
+        bot.logout();
+    }
+    
+    public List<IGuild> getGuilds() {
+        return bot.getGuilds();
     }
     
     private IDiscordClient createClient(String token) {
