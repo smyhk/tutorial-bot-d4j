@@ -82,7 +82,7 @@ public class Config {
                 ret = b.replace(path + seperator, "");
             }
         }
-        if (ret == "nil") {
+        if (ret.equals("nil")) {
             set(path, def);
             ret = def;
         }
