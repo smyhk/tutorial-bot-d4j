@@ -64,6 +64,7 @@ public class CommandManager {
                 if (command.getLabel().equalsIgnoreCase(label)) {
                     worked = true;
                     command.runCommand(user, channel, guild, label, args);
+                    event.getMessage().delete();
                 }
             } // end for
             
