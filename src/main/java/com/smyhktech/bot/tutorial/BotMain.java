@@ -15,6 +15,7 @@ public class BotMain {
     
     public static void main(String[] args) {
         
+        // this token will be regenerated and acquired via environment variables
         Bot bot = new Bot("NDA1NDMyNDYwOTY5NjM5OTM2.DUrLRg.wR7TWPxkU6hbkx01CIvB-Ebdu9E");
     }
 }
