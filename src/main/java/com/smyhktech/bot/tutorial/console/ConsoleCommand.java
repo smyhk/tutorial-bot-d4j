@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.smyhktech.bot.tutorial.objects;
+package com.smyhktech.bot.tutorial.console;
 
 /**
  *
  * @author skedzie
  */
-public interface ConsoleCommandMethod {
+public interface ConsoleCommand {
     
-    public void consoleMethod(String[] args);
+    public String getLabel();
+    public String getDescription();
+    
+    public void run(String[] args);
     
 }
